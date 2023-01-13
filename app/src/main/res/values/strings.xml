@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Contacts</string>
+    <string name="addNewContact">Add new Contact</string>
+    <string name="imgDescr">Contact Person Image</string>
+    <string name="edt_show_name">Contact Name</string>
+    <string name="edt_show_number">Contact Number</string>
 </resources>

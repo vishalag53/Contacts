@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:cardCornerRadius="7dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/llRow"
+            android:layout_width="match_parent"
+            android:layout_height="97dp"
+            android:gravity="center_vertical"
+            android:padding="11dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imgContact"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:contentDescription="@string/imgDescr"
+                android:src="@drawable/a" />
+
+            <LinearLayout
+                android:id="@+id/insideLlRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:layout_marginLeft="11dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/edtName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/edt_show_name"
+                    android:textSize="17dp"
+                    android:textStyle="bold|italic" />
+
+                <TextView
+                    android:id="@+id/edtNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:text="@string/edt_show_number"
+                    android:textSize="17dp"
+                    android:textStyle="bold|italic" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
