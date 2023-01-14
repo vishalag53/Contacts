@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:background="@color/design_default_color_secondary"
+        android:orientation="vertical"
+        android:paddingLeft="21dp"
+        android:paddingRight="21dp"
+        android:paddingBottom="11dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:layout_marginBottom="12dp"
+            android:id="@+id/txtTitle"
+            android:gravity="center"
+            android:text="@string/addTitle"
+            android:textSize="32sp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/edtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="17dp"
+            android:background="@color/white"
+            android:hint="@string/enterNewContactName"
+            android:inputType="text"
+            android:padding="11dp" />
+
+        <EditText
+            android:id="@+id/edtNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:hint="@string/enterNewContactNumber"
+            android:inputType="text"
+            android:padding="11dp" />
+
+
+        <Button
+            android:id="@+id/btnAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="11dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/add_btn"
+            android:textColor="@color/design_default_color_secondary" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

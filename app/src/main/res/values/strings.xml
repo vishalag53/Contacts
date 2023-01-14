@@ -4,4 +4,8 @@
     <string name="imgDescr">Contact Person Image</string>
     <string name="edt_show_name">Contact Name</string>
     <string name="edt_show_number">Contact Number</string>
+    <string name="addTitle">Add Contact</string>
+    <string name="enterNewContactName">Enter Name</string>
+    <string name="enterNewContactNumber">Enter Number</string>
+    <string name="add_btn">Add</string>
 </resources>

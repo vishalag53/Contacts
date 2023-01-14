@@ -38,7 +38,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/edtName"
+                    android:id="@+id/txtName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/edt_show_name"
@@ -46,7 +46,7 @@
                     android:textStyle="bold|italic" />
 
                 <TextView
-                    android:id="@+id/edtNumber"
+                    android:id="@+id/txtNumber"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="text"
