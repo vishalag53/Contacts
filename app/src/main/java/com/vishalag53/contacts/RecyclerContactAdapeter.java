@@ -8,6 +8,8 @@ import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -15,6 +17,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.AnimatorRes;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.RecyclerView.Adapter;
@@ -25,6 +28,7 @@ public class RecyclerContactAdapeter extends Adapter<RecyclerContactAdapeter.Vie
 
     Context context;
     ArrayList<ContactModel> arrContacts;
+    private int lastPosition = -1;
 
     RecyclerContactAdapeter(Context context, ArrayList<ContactModel> arrContacts){
         this.context = context;
@@ -45,6 +49,7 @@ public class RecyclerContactAdapeter extends Adapter<RecyclerContactAdapeter.Vie
         holder.imgContact.setImageResource(arrContacts.get(position).img);
         holder.txtName.setText(arrContacts.get(position).name);
         holder.txtNumber.setText(arrContacts.get(position).number);
+        setAnimation(holder.itemView,position);
 
         holder.llRow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -133,5 +138,13 @@ public class RecyclerContactAdapeter extends Adapter<RecyclerContactAdapeter.Vie
             txtName = itemView.findViewById(R.id.txtName);
             txtNumber = itemView.findViewById(R.id.txtNumber);
         }
+    }
+
+    private void setAnimation(View viewToAnimate, int position){
+         if(position>lastPosition){
+            Animation slideIn = AnimationUtils.loadAnimation(context,R.anim.rcy_anim);
+            viewToAnimate.startAnimation(slideIn);
+            lastPosition = position;
+         }
     }
 }
